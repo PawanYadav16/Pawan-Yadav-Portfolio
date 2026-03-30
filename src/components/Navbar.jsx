@@ -11,7 +11,7 @@ const links = [
   'contact',
 ];
 
-export default function Navbar({ onToggleTheme, theme }) {
+export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState('home');
 
@@ -38,10 +38,10 @@ export default function Navbar({ onToggleTheme, theme }) {
           onClick={() => handleScroll('home')}
         >
           <span className="block bg-gradient-to-r from-indigo-400 via-sky-400 to-emerald-300 bg-clip-text text-transparent">
-            Gourav&nbsp;Yadav
+            Pawan&nbsp;Yadav
           </span>
           <span className="block text-[11px] font-normal text-slate-400">
-            Aspiring Web Developer
+            B.Tech CSE · CyberSecurity
           </span>
         </button>
 
@@ -59,23 +59,9 @@ export default function Navbar({ onToggleTheme, theme }) {
               {link}
             </button>
           ))}
-          <button
-            aria-label="Toggle dark mode"
-            onClick={onToggleTheme}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 bg-slate-900/80 text-slate-200 shadow-sm transition hover:border-indigo-500 hover:text-indigo-300"
-          >
-            {theme === 'dark' ? '🌙' : '☀️'}
-          </button>
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
-          <button
-            aria-label="Toggle dark mode"
-            onClick={onToggleTheme}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-700 bg-slate-900/80 text-slate-200 shadow-sm transition hover:border-indigo-500 hover:text-indigo-300"
-          >
-            {theme === 'dark' ? '🌙' : '☀️'}
-          </button>
           <button
             onClick={() => setOpen((p) => !p)}
             className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-slate-700 bg-slate-900/90 text-slate-100"

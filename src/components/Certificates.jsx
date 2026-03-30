@@ -1,20 +1,20 @@
 import { useState } from 'react';
-import fundamentalsImg from '../assets/certificates/bits.png';
-import computationalImg from '../assets/certificates/nptel.png';
-import peerToPeerImg from '../assets/certificates/network.png';
+import fundamentalsImg from '../assets/certificates/d.png';
+import computationalImg from '../assets/certificates/b.png';
+import peerToPeerImg from '../assets/certificates/c.png';
 
 const certificates = [
  
   {
     id: 2,
     name: 'Cloud Computing',
-    organization: 'NPTEL | April 2025',
+    organization: 'NPTEL | May 2025',
     file: computationalImg,
   },
   {
     id: 3,
-    name: 'Fundamentals of Network Communication',
-    organization: 'Coursera | September 2024',
+    name: 'Peer‑to‑Peer Protocols and Local Area Networks',
+    organization: 'Coursera | Oct 2024',
     file: peerToPeerImg,
   },
   {
@@ -41,7 +41,7 @@ export default function Certificates() {
           <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
             Certifications           </h2>
           <p className="mx-auto max-w-2xl text-sm text-slate-300 sm:text-base">
-            A gallery of training certificates.
+            A gallery of my certificates.
             
           </p>
         </div>
@@ -51,15 +51,23 @@ export default function Certificates() {
             <button
               key={cert.id}
               type="button"
-              onClick={() => setSelected(cert)}
+              onClick={() => cert.file && setSelected(cert)}
               className="group flex flex-col rounded-2xl border border-slate-800 bg-slate-900/70 text-left shadow-sm shadow-slate-900/80 transition hover:-translate-y-1 hover:border-indigo-500/80 hover:shadow-glow"
             >
               <div className="relative h-40 overflow-hidden rounded-t-2xl bg-slate-900">
-                <img
-                  src={cert.file}
-                  alt={cert.name}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-                />
+                {cert.file ? (
+                  <img
+                    src={cert.file}
+                    alt={cert.name}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+                    <span className="rounded-full border border-slate-700 bg-slate-950/60 px-3 py-1 text-[11px] font-semibold text-slate-200">
+                      Certificate
+                    </span>
+                  </div>
+                )}
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-80" />
               </div>
               <div className="flex flex-1 flex-col justify-between rounded-b-2xl p-4">
@@ -72,7 +80,7 @@ export default function Certificates() {
                   </p>
                 </div>
                 <p className="mt-3 text-[11px] font-medium text-indigo-300">
-                  Click to preview
+                  {cert.file ? 'Click to preview' : 'Preview not available'}
                 </p>
               </div>
             </button>

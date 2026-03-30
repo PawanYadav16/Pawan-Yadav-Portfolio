@@ -10,19 +10,15 @@ export default function About() {
             About Me
           </p>
           <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-            B.Tech CSE student passionate about building modern web experiences.
+          Cybersecurity + Systems + Backend (security-focused)
           </h2>
           <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
-            I&apos;m currently pursuing B.Tech in Computer Science and Engineering at
-            Lovely Professional University. I enjoy solving real-world problems using
-            clean, maintainable code and love working with the MERN stack to build
-            full‑stack web applications.
+          I am a Computer Science undergraduate with a strong focus on cybersecurity, backend systems, and Linux-based environments. My work revolves around understanding how systems operate, identifying vulnerabilities, and building secure solutions that prevent misuse rather than reacting to it.
+
+I have hands-on experience with tools like Nmap and Wireshark, along with practical exposure through platforms like TryHackMe and Hack The Box. This has helped me develop a practical understanding of network analysis, reconnaissance, and system behavior under attack scenarios.
           </p>
           <p className="text-sm leading-relaxed text-slate-300 sm:text-base">
-            My interests lie in web development, backend APIs, and software
-            engineering. I regularly explore new tools in the JavaScript ecosystem
-            and sharpen my problem‑solving skills through coding practice and
-            projects.
+          I am particularly interested in combining development with security — not just building applications, but making sure they are resistant to real-world threats. I pay attention to how data flows, how systems fail, and how attackers think.
           </p>
         </div>
 
@@ -33,7 +29,7 @@ export default function About() {
               <p className="mt-1 text-sm font-medium text-slate-100">
                 Lovely Professional University
               </p>
-              <p className="mt-1 text-xs text-slate-400">CGPA: 8.07</p>
+              <p className="mt-1 text-xs text-slate-400">CGPA: 7.23</p>
             </div>
             <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 shadow-sm shadow-slate-900/60">
               <p className="text-xs font-semibold text-slate-400">Degree</p>
@@ -46,7 +42,7 @@ export default function About() {
                 Primary Skills
               </p>
               <p className="mt-1 text-sm font-medium text-slate-100">
-                MERN Stack, JavaScript, Problem Solving
+                Python, C++, Bash, Linux 
               </p>
             </div>
             <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 shadow-sm shadow-slate-900/60">

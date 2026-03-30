@@ -1,19 +1,69 @@
-const skills = [
-  { name: 'HTML', icon: 'devicon-html5-plain colored' },
-  { name: 'CSS', icon: 'devicon-css3-plain colored' },
-  { name: 'JavaScript', icon: 'devicon-javascript-plain colored' },
-  { name: 'React', icon: 'devicon-react-original colored' },
-  { name: 'Tailwind CSS', icon: 'devicon-tailwindcss-plain colored' },
-  { name: 'Node.js', icon: 'devicon-nodejs-plain colored' },
-  { name: 'Express.js', icon: 'devicon-express-original' },
-  { name: 'MongoDB', icon: 'devicon-mongodb-plain colored' },
-  { name: 'C++', icon: 'devicon-cplusplus-plain colored' },
-  { name: 'Java', icon: 'devicon-java-plain colored' },
-  { name: 'Python', icon: 'devicon-python-plain colored' },
-  { name: 'Git', icon: 'devicon-git-plain colored' },
-  { name: 'GitHub', icon: 'devicon-github-original' },
-  { name: 'VS Code', icon: 'devicon-vscode-plain colored' },
+import nmapLogo from '../assets/skills/nmap.png';
+
+const ICON = {
+  python:
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+  c: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
+  cpp: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
+  java: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+  html: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+  css: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+  django:
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg',
+  react:
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+  nmap: nmapLogo,
+  wireshark: 'https://cdn.simpleicons.org/wireshark/1679A7',
+  thm: 'https://cdn.simpleicons.org/tryhackme/212C42',
+  htb: 'https://cdn.simpleicons.org/hackthebox/9FEF00',
+};
+
+const skillGroups = [
+  {
+    title: 'Languages',
+    items: [
+      { label: 'Python', src: ICON.python, alt: 'Python' },
+      { label: 'C', src: ICON.c, alt: 'C' },
+      { label: 'C++', src: ICON.cpp, alt: 'C++' },
+      { label: 'Java', src: ICON.java, alt: 'Java' },
+    ],
+  },
+  {
+    title: 'Frameworks',
+    items: [
+      { label: 'HTML', src: ICON.html, alt: 'HTML' },
+      { label: 'CSS', src: ICON.css, alt: 'CSS' },
+      { label: 'Django', src: ICON.django, alt: 'Django' },
+      { label: 'React', src: ICON.react, alt: 'React' },
+    ],
+  },
+  {
+    title: 'Tools / Platforms',
+    items: [
+      { label: 'Nmap', src: ICON.nmap, alt: 'Nmap' },
+      { label: 'Wireshark', src: ICON.wireshark, alt: 'Wireshark' },
+      { label: 'THM', src: ICON.thm, alt: 'TryHackMe' },
+      { label: 'HTB', src: ICON.htb, alt: 'Hack The Box' },
+    ],
+  },
 ];
+
+function SkillTile({ label, src, alt }) {
+  return (
+    <div className="flex flex-col items-center gap-3 rounded-xl px-3 py-4 text-center transition hover:bg-slate-800/50">
+      <div className="flex h-14 w-14 items-center justify-center sm:h-16 sm:w-16">
+        <img
+          src={src}
+          alt={alt}
+          className="max-h-full max-w-full object-contain"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <span className="text-sm font-medium text-slate-200 sm:text-base">{label}</span>
+    </div>
+  );
+}
 
 export default function Skills() {
   return (
@@ -30,22 +80,28 @@ export default function Skills() {
             Technologies I work with
           </h2>
           <p className="mx-auto max-w-2xl text-sm text-slate-300 sm:text-base">
-            A snapshot of the languages, frameworks, and tools I use to build full‑stack
-            web applications and solve real‑world problems.
+            A snapshot of the languages, frameworks, and tools I use to build full-stack web
+            applications and solve real-world problems.
           </p>
         </div>
 
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 shadow-sm shadow-slate-900/70">
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-5">
-            {skills.map((skill) => (
-              <div
-                key={skill.name}
-                className="group flex min-w-[110px] max-w-[150px] flex-col items-center gap-2 rounded-xl border border-slate-800 bg-slate-900/80 px-3 py-3 text-center text-xs text-slate-200 shadow-sm shadow-slate-950/70 transition hover:-translate-y-1 hover:border-indigo-500/80 hover:shadow-lg hover:shadow-indigo-500/40"
-              >
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-slate-900/90 transition group-hover:bg-slate-900 group-hover:shadow-[0_0_25px_rgba(129,140,248,0.7)]">
-                  <i className={`${skill.icon} text-[22px]`} aria-hidden="true" />
+        <div className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 shadow-sm shadow-slate-900/70 sm:p-8">
+          <div className="space-y-10">
+            {skillGroups.map((group) => (
+              <div key={group.title}>
+                <p className="mb-4 text-center text-sm font-semibold uppercase tracking-[0.22em] text-indigo-300 sm:text-left">
+                  {group.title}
+                </p>
+                <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-4 md:grid-cols-4">
+                  {group.items.map((item) => (
+                    <SkillTile
+                      key={item.label}
+                      label={item.label}
+                      src={item.src}
+                      alt={item.alt}
+                    />
+                  ))}
                 </div>
-                <span className="font-medium text-[11px]">{skill.name}</span>
               </div>
             ))}
           </div>
@@ -54,4 +110,3 @@ export default function Skills() {
     </section>
   );
 }
-

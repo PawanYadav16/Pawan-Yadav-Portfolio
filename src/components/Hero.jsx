@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
-import cvImage from '../assets/resume/CV.png';
+import cvPdf from '../assets/resume/Pawan_Yadav_CV.pdf';
 
 const typingItems = [
-  'MERN Stack Developer',
-  'Frontend Enthusiast',
+  
+  
+  
+  'Cybersecurity Learner',
   'Problem Solver',
   'B.Tech CSE @ LPU',
 ];
@@ -50,8 +52,8 @@ export default function Hero() {
 
   const handleDownloadCV = () => {
     const link = document.createElement('a');
-    link.href = cvImage;
-    link.download = 'GouravYadavCV.png';
+    link.href = cvPdf;
+    link.download = 'pawan cv 2026.pdf';
     link.click();
   };
 
@@ -69,21 +71,22 @@ export default function Hero() {
       <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center gap-10 text-center md:flex-row md:items-center md:text-left">
         <div className="flex-1 space-y-6">
           <p className="inline-flex items-center rounded-full bg-slate-900/70 px-3 py-1 text-xs font-medium text-sky-300 ring-1 ring-sky-500/40">
-            Open to Web & Software Development Internships
+            Open to  Cybersecurity Internships
           </p>
           <h1 className="text-balance text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             Hi, I&apos;m{' '}
             <span className="bg-gradient-to-r from-indigo-400 via-sky-300 to-emerald-300 bg-clip-text text-transparent">
-              Gourav&nbsp;Yadav
+              Pawan&nbsp;Yadav
             </span>
             <span className="block text-2xl font-semibold text-slate-300 sm:text-3xl">
-              Aspiring Web Developer | B.Tech CSE (MERN Focus)
+            Cybersecurity Enthusiast | 
+            Network Security • Linux Os
             </span>
           </h1>
           <p className="max-w-xl text-sm text-slate-300 sm:text-base">
-            I&apos;m a Computer Science undergraduate at Lovely Professional University
-            who loves building fast, modern web applications using the MERN stack.
-            I enjoy turning complex problems into clean, scalable software.
+          I am a Computer Science undergraduate focused on cybersecurity and secure backend systems. I work on identifying vulnerabilities, analyzing network behavior, and building applications with strong authentication and encryption mechanisms.
+
+I have hands-on experience with tools like Nmap and Wireshark and regularly practice real-world attack scenarios on platforms like TryHackMe and Hack The Box.
           </p>
 
           <div className="flex items-center justify-center gap-2 text-sm text-slate-300 md:justify-start">
@@ -136,7 +139,7 @@ export default function Hero() {
               <div className="mt-2 grid grid-cols-2 gap-2 text-left text-[11px] text-slate-300">
                 <div className="rounded-xl bg-slate-900/70 p-2 ring-1 ring-slate-800">
                   <p className="text-[10px] font-semibold text-slate-400">Focus</p>
-                  <p>MERN Stack, React, APIs</p>
+                  <p>Python, Linux Os, Networking, Problem Solving</p>
                 </div>
                 <div className="rounded-xl bg-slate-900/70 p-2 ring-1 ring-slate-800">
                   <p className="text-[10px] font-semibold text-slate-400">Location</p>

@@ -1,54 +1,46 @@
 import { useMemo, useState } from 'react';
 
-import expenseImg from '../assets/images/projects/expense.png';
-import stockImg from '../assets/images/projects/stmg.jpeg';
-import startupImg from '../assets/images/projects/startup.jpeg';
+import passwordManagerImg from '../assets/images/projects/1.jpeg';
+import cpuSchedulingImg from '../assets/images/projects/2.jpeg';
+import linuxScriptsImg from '../assets/images/projects/3.jpeg';
 
-const githubProfileLink = 'https://github.com/Gourav230705';
+const githubProfileLink = 'https://github.com/PawanYadav16';
 
 const allProjects = [
   {
     id: 1,
-    title: 'iExpenseTracker – Expense Tracking System',
-    short: 'Expense tracking application',
+    title: 'Secure Password Manager',
+    short: 'Backend security + encryption',
     description:
-      'A full-stack expense tracking application that helps users manage daily spending with secure authentication and an intuitive dashboard.',
-    tech: [
-      'React',
-      'Node.js',
-      'Express',
-      'MongoDB',
-      'Redux',
-      'JWT',
-      'Tailwind CSS',
-    ],
-    type: 'fullstack',
-    github: githubProfileLink,
-    image: expenseImg,
+      'Built a backend system with JWT-based auth, encrypted credential storage using symmetric encryption, and a custom password validation layer (strength checks + local leaked-password dataset).',
+    tech: ['Python', 'Django', 'JWT', 'Encryption'],
+    type: 'backend',
+    github: 'https://github.com/PawanYadav16/Secure-Password-Manager',
+    image: passwordManagerImg,
     demo: null,
   },
   {
     id: 2,
-    title: 'STMG – Stock Management System',
-    short: 'Inventory & billing platform',
+    title: 'Intelligent CPU Scheduling Simulator',
+    short: 'Algorithms + Gantt chart UI',
     description:
-      'A centralized inventory management system designed to streamline multi-branch stock handling, billing, and supplier tracking.',
-    tech: ['PHP', 'MySQL', 'JavaScript', 'jQuery', 'AJAX', 'HTML', 'CSS'],
-    type: 'fullstack',
-    github: githubProfileLink,
-    image: stockImg,
+      'Developed a web-based simulator implementing FCFS, SJF, Priority, and Round Robin with real-time Gantt charts and performance metrics (Avg. Waiting Time, Turnaround Time).',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    type: 'frontend',
+    github: 'https://github.com/PawanYadav16/Cpu-Scheduler',
+    image: cpuSchedulingImg,
     demo: null,
   },
   {
     id: 3,
-    title: 'StartupMarket',
-    short: 'Startup marketplace web app',
+    title: 'Linux System Administration Scripts',
+    short: 'Automation + log analysis',
     description:
-      'A web application where startup founders can list their startups and products, and customers or investors can browse, purchase products, and connect with startups.',
-    tech: ['MongoDB', 'Express', 'React', 'Nodejs'],
-    type: 'fullstack',
-    github: githubProfileLink,
-    image: startupImg,
+      'Automated Linux administration tasks with Bash scripts (login monitoring, reboot tracking, session logging) and log analysis for failed login attempts and unauthorized access patterns.',
+    tech: ['Bash', 'Linux CLI'],
+    type: 'backend',
+    github: 'https://github.com/PawanYadav16/Linux-commands',
+    image: linuxScriptsImg,
     demo: null,
   },
 ];
@@ -57,7 +49,6 @@ const filters = [
   { id: 'all', label: 'All' },
   { id: 'frontend', label: 'Frontend / UI' },
   { id: 'backend', label: 'Backend / Tools' },
-  { id: 'fullstack', label: 'Full‑Stack' },
 ];
 
 export default function Projects() {
@@ -82,7 +73,7 @@ export default function Projects() {
             Featured Projects
           </h2>
           <p className="mx-auto max-w-2xl text-sm text-slate-300 sm:text-base">
-            Projects I’ve built across full‑stack web development and Python tools.
+            
           </p>
         </div>
 
@@ -130,11 +121,7 @@ export default function Projects() {
                       </h3>
                     </div>
                     <span className="shrink-0 rounded-full bg-slate-950/70 px-2 py-0.5 text-[10px] font-medium text-slate-100 ring-1 ring-slate-700/70">
-                      {project.type === 'fullstack'
-                        ? 'Full‑Stack'
-                        : project.type === 'frontend'
-                        ? 'Frontend'
-                        : 'Backend'}
+                      {project.type === 'frontend' ? 'Frontend' : 'Backend'}
                     </span>
                   </div>
                 </div>

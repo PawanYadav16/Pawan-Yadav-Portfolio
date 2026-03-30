@@ -14,11 +14,11 @@ export default function Contact() {
             Contact
           </p>
           <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-            Want a project?
+            Let’s connect
           </h2>
           <p className="mx-auto max-w-2xl text-sm text-slate-300 sm:text-base">
-            Share your idea and I&apos;ll get back to you with how we can build it
-            together.
+            For internships, collaborations, or project discussions, reach out via email
+            or connect on LinkedIn/GitHub.
           </p>
         </div>
 
@@ -55,9 +55,8 @@ export default function Contact() {
                 name="email"
                 type="email"
                 required
-                defaultValue="gouravsatoriya2005@gmail.com"
                 className="mt-1 w-full rounded-lg border border-slate-700 bg-slate-950/80 px-3 py-2 text-sm text-slate-100 outline-none ring-0 transition focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
-                placeholder="gouravsatoriya2005@gmail.com"
+                placeholder="pawanyadav852768@gmail.com"
               />
             </div>
             <div>
@@ -82,12 +81,18 @@ export default function Contact() {
             >
               Let&apos;s Connect
             </button>
-           
           </form>
 
           <div className="mt-4 flex flex-wrap justify-center gap-2 text-xs">
             <a
-              href="https://www.linkedin.com/in/gourav005/"
+              href="mailto:pawanyadav852768@gmail.com"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-950/80 px-4 py-2 text-slate-100 transition hover:-translate-y-0.5 hover:border-indigo-500 hover:shadow-lg hover:shadow-indigo-500/30"
+            >
+              Email
+            </a>
+            
+            <a
+              href="https://linkedin.com/in/pawan-yadav26"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-950/80 px-4 py-2 text-slate-100 transition hover:-translate-y-0.5 hover:border-indigo-500 hover:shadow-lg hover:shadow-indigo-500/30"
@@ -95,7 +100,7 @@ export default function Contact() {
               LinkedIn
             </a>
             <a
-              href="https://github.com/Gourav230705"
+              href="https://github.com/PawanYadav16"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-950/80 px-4 py-2 text-slate-100 transition hover:-translate-y-0.5 hover:border-indigo-500 hover:shadow-lg hover:shadow-indigo-500/30"
