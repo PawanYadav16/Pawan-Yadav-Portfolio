@@ -51,7 +51,7 @@ export default function App() {
             <div className="mt-6 flex justify-center">
               <a
                 href={cvPdf}
-                download="pawan cv 2026.pdf"
+                download="POrtfolio cv.pdf"
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-sky-500 px-6 py-2.5 text-sm font-semibold text-slate-950 shadow-glow transition hover:brightness-110"
               >
                 Download CV

@@ -53,7 +53,7 @@ export default function Hero() {
   const handleDownloadCV = () => {
     const link = document.createElement('a');
     link.href = cvPdf;
-    link.download = 'pawan cv 2026.pdf';
+    link.download = 'POrtfolio cv.pdf';
     link.click();
   };
 
