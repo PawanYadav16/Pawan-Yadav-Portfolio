@@ -24,25 +24,71 @@ I have hands-on experience with tools like Nmap and Wireshark, along with practi
 
         <div className="flex-1">
           <div className="grid gap-4 sm:grid-cols-2">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 shadow-sm shadow-slate-900/60">
-              <p className="text-xs font-semibold text-slate-400">University</p>
-              <p className="mt-1 text-sm font-medium text-slate-100">
-                Lovely Professional University
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 shadow-sm shadow-slate-900/60 sm:col-span-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300">
+                Education
               </p>
-              <p className="mt-1 text-xs text-slate-400">CGPA: 7.23</p>
-            </div>
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 shadow-sm shadow-slate-900/60">
-              <p className="text-xs font-semibold text-slate-400">Degree</p>
-              <p className="mt-1 text-sm font-medium text-slate-100">
-                B.Tech Computer Science & Engineering
-              </p>
+              <div className="mt-4 space-y-6">
+                <div>
+                  <p className="text-xs font-semibold text-slate-400">University</p>
+                  <p className="mt-2 text-sm font-medium text-slate-100">
+                    Lovely Professional University
+                  </p>
+                  <p className="mt-1 text-sm text-slate-300">B.Tech Computer Science Engineering</p>
+                  <p className="mt-1 text-sm text-slate-400">CGPA: 7.23</p>
+                </div>
+
+                <div>
+                  <p className="text-xs font-semibold text-slate-400">Schooling</p>
+                  <div className="mt-3 space-y-4 border-t border-slate-800 pt-4">
+                    <div>
+                      <p className="text-xs font-semibold text-indigo-200/90">
+                        Intermediate
+                      </p>
+                      <ul className="mt-2 space-y-1.5 text-sm text-slate-300">
+                        <li>
+                          <span className="text-slate-500">Laxmi International School</span>{' '}
+                          <span className="text-slate-200"></span>
+                        </li>
+                        <li>
+                          <span className="text-slate-500">2022-2023</span>{' '}
+                          <span className="text-slate-200"></span>
+                        </li>
+                        <li>
+                          <span className="text-slate-500">Percentage: 75.8%</span>{' '}
+                          <span className="text-slate-200"></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-indigo-200/90">
+                        Matriculation
+                      </p>
+                      <ul className="mt-2 space-y-1.5 text-sm text-slate-300">
+                        <li>
+                          <span className="text-slate-500">Laxmi International School</span>{' '}
+                          <span className="text-slate-200"></span>
+                        </li>
+                        <li>
+                          <span className="text-slate-500">2020-2021</span>{' '}
+                          <span className="text-slate-200"></span>
+                        </li>
+                        <li>
+                          <span className="text-slate-500">Percentage: 79%</span>{' '}
+                          <span className="text-slate-200"></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 shadow-sm shadow-slate-900/60">
               <p className="text-xs font-semibold text-slate-400">
                 Primary Skills
               </p>
               <p className="mt-1 text-sm font-medium text-slate-100">
-                Python, C++, Bash, Linux 
+                Python, C++, Bash, Linux
               </p>
             </div>
             <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 shadow-sm shadow-slate-900/60">
